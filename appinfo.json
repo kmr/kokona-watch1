@@ -1,0 +1,48 @@
+{
+    "appKeys": {},
+    "capabilities": [
+        ""
+    ],
+    "companyName": "mio design works",
+    "longName": "kokona-watch1",
+    "projectType": "native",
+    "resources": {
+        "media": [
+            {
+                "file": "images/kokona3.png",
+                "menuIcon": true,
+                "name": "BACK",
+                "targetPlatforms": [
+                    "basalt"
+                ],
+                "type": "png"
+            },
+            {
+                "file": "fonts/mikiyu.ttf",
+                "name": "FONT_PERFECT_DOS_16",
+                "targetPlatforms": [
+                    "basalt"
+                ],
+                "type": "font"
+            },
+            {
+                "file": "fonts/mikiyu.ttf",
+                "name": "FONT_PERFECT_DOS_32",
+                "targetPlatforms": [
+                    "basalt"
+                ],
+                "type": "font"
+            }
+        ]
+    },
+    "sdkVersion": "3",
+    "shortName": "kokona-watch1",
+    "targetPlatforms": [
+        "basalt"
+    ],
+    "uuid": "6256d5df-dbe7-4a34-9600-3d832de1d1f8",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": true
+    }
+}
