@@ -5,6 +5,7 @@ static TextLayer *s_time_layer;
 static GFont s_time_font;
 static TextLayer *s_date_layer;
 static GFont s_date_font;
+static struct tm *old_tick_time = NULL;
 
 static BitmapLayer *s_background_layer;
 static GBitmap *s_background_bitmap;
@@ -29,12 +30,16 @@ static void update_time() {
   // Display this time on the TextLayer
   text_layer_set_text(s_time_layer, buffer);
   
-  // Copy date into buffer from tm structure
-  static char date_buffer[] = "00/00";
-  strftime(date_buffer, sizeof(date_buffer), "%m/%d", tick_time);
-
-  // Show the date
-  text_layer_set_text(s_date_layer, date_buffer);
+  // Copy date into buffer from tm structure, if needed.
+  if(old_tick_time == NULL || tick_time->tm_mon != old_tick_time->tm_mon || tick_time->tm_mday != old_tick_time->tm_mday ) {
+    static char date_buffer[] = "00/00";
+    strftime(date_buffer, sizeof(date_buffer), "%m/%d", tick_time);
+  
+    // Show the date
+    text_layer_set_text(s_date_layer, date_buffer);
+  }
+  
+  old_tick_time = tick_time;
 }
 
 static void main_window_load(Window *window) {
