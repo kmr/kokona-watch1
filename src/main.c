@@ -31,7 +31,7 @@ static void update_time() {
   text_layer_set_text(s_time_layer, buffer);
   
   // Copy date into buffer from tm structure, if needed.
-  if(old_tick_time == NULL || tick_time->tm_mon != old_tick_time->tm_mon || tick_time->tm_mday != old_tick_time->tm_mday ) {
+  if(NULL == old_tick_time || tick_time->tm_mon != old_tick_time->tm_mon || tick_time->tm_mday != old_tick_time->tm_mday ) {
     static char date_buffer[] = "00/00";
     strftime(date_buffer, sizeof(date_buffer), "%m/%d", tick_time);
   
