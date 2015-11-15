@@ -19,7 +19,15 @@
             },
             {
                 "file": "fonts/mikiyu.ttf",
-                "name": "FONT_PERFECT_DOS_16",
+                "name": "FONT_PERFECT_DOS_24",
+                "targetPlatforms": [
+                    "basalt"
+                ],
+                "type": "font"
+            },
+            {
+                "file": "fonts/mikiyu.ttf",
+                "name": "FONT_PERFECT_DOS_48",
                 "targetPlatforms": [
                     "basalt"
                 ],
@@ -28,6 +36,14 @@
             {
                 "file": "fonts/mikiyu.ttf",
                 "name": "FONT_PERFECT_DOS_32",
+                "targetPlatforms": [
+                    "basalt"
+                ],
+                "type": "font"
+            },
+            {
+                "file": "fonts/mikiyu.ttf",
+                "name": "FONT_PERFECT_DOS_16",
                 "targetPlatforms": [
                     "basalt"
                 ],

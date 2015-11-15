@@ -51,13 +51,13 @@ static void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
   
   // Create time TextLayer
-  s_time_layer = text_layer_create(GRect(5, 130, 139, 50));
+  s_time_layer = text_layer_create(GRect(5, 115, 155, 90));
   text_layer_set_background_color(s_time_layer, GColorClear);
-  text_layer_set_text_color(s_time_layer, GColorYellow);
+  text_layer_set_text_color(s_time_layer, GColorWhite);
   text_layer_set_text(s_time_layer, "00:00");
   
   //Create GFont
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_32));
+  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_48));
 
   //Apply to TextLayer
   text_layer_set_font(s_time_layer, s_time_font);
@@ -67,13 +67,13 @@ static void main_window_load(Window *window) {
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_time_layer));
 
   // Create date TextLayer
-  s_date_layer = text_layer_create(GRect(5, 115, 139, 30));
+  s_date_layer = text_layer_create(GRect(5, 95, 139, 30));
   text_layer_set_background_color(s_date_layer, GColorClear);
-  text_layer_set_text_color(s_date_layer, GColorYellow);
+  text_layer_set_text_color(s_date_layer, GColorWhite);
   text_layer_set_text(s_date_layer, "00/00");
   
   //Create GFont
-  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_16));
+  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_FONT_PERFECT_DOS_24));
 
   //Apply to TextLayer
   text_layer_set_font(s_date_layer, s_date_font);
